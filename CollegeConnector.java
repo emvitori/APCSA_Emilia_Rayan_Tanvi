@@ -100,10 +100,10 @@ public class CollegeConnector {
     // toString method that returns a string representation of the CollegeConnector object
     public String toString() {
         if (getLength() > 3) {
-            return "Your best fit would be a " + getLocation() + getPublic() + " school with a " + getGraduate() + "program that has a " + getModel() + " model, and is in a " + getEnvironmentSize() + " environment.";
+            return "Your best fit would be a " + getLocation() + getPublic() + " school with a " + getGraduate() + "program that has a " + getModel() + " model, and is in a " + getEnvironmentSize() + " environment.😀";
     }
         else {
-            return "Your best fit would be a " + getLocation() + getPublic() + " school with a " + getModel() + " model, and is in a " + getEnvironmentSize() + " environment.";
+            return "Your best fit would be a " + getLocation() + getPublic() + " school with a " + getModel() + " model, and is in a " + getEnvironmentSize() + " environment. 😀";
 }
     }
 }
