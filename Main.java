@@ -60,7 +60,7 @@ public class Main {
 
 // checks if the user is planning to go to college for more than 3 years, if so, asks if they are interested in Med or Law school and stores the input in the CollegeConnector object
         if (user.getLength() > 3) {
-            System.out.println("Specify if you are interested in Med or Law school?: ");
+            System.out.println("Specify if you are interested in Med or Law school? (Enter Med, Law, or No): ");
             user.setGraduate(input.next());
             System.out.println();
             if (user.getGraduate().equals("Med") || user.getGraduate().equals("med")) {
@@ -82,7 +82,7 @@ public class Main {
         user.setCost(input.nextInt());
         System.out.println();
         if (user.getCost() > 20000) {
-            System.out.println("Do you want to go to a Public or Private college?: ");
+            System.out.println("Do you want to go to a Public or Private college? (Enter \"Public\" or \"Private\"): ");
             user.setPublic(input.next());
             System.out.println();}
         else {
@@ -91,8 +91,9 @@ public class Main {
             }
         
  // asks the user what model aligns best with their interests and stores the input in the CollegeConnector object 
-        System.out.println("what model aligns best with your interests?: Research, Technical, Military");
-        user.setModel(input.next());
+        System.out.println("what model aligns best with your interests?: Research, Technical, Military, Liberal Arts");
+        input.nextLine(); // Useless next line; not including this will cause this question to be skipped for some reason
+        user.setModel(input.nextLine());
         System.out.println();
         if (user.getModel().equals("Technical") || user.getModel().equals("technical") || user.getModel().equals("Vocational") || user.getModel().equals("vocational")) {
             user.setModel("Technical/Vocational");
@@ -112,18 +113,18 @@ public class Main {
         System.out.println("How many students would you like to be around?:");
         user.setEnvironment(input.nextInt());
         System.out.println();
-        if (user.getEnvironment() < 5000) {
+        if (user.getEnvironment() <= 5000) {
             user.setEnvironmentSize("Rural");
         }
-        else if (user.getEnvironment() < 10000) {
+        else if (user.getEnvironment() <= 10000) {
             user.setEnvironmentSize("Suburban ");
         }
-        else if (user.getEnvironment() < 15000) {
+        else {
             user.setEnvironmentSize("Urban");
         }
 
 // asks the user if they would like to study abroad and stores the input in the CollegeConnector object
-        System.out.println("Would you like to study Abroad?:");
+        System.out.println("Would you like to study Abroad? (Yes/No):");
         user.setLocation(input.next());
         System.out.println();
         if (user.getLocation().equals("yes") || user.getLocation().equals("Yes")) {
